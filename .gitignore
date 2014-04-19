@@ -14,3 +14,13 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore the specific normalize and modernizr files
+app/assets/javascripts/modernizr.js
+app/assets/stylesheets/normalize.css
+
+# Ignore the lib folder and its contents
+lib/
+
+# Ignore the vendor folder and its contents
+vendor/
