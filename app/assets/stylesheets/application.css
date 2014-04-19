@@ -11,4 +11,11 @@
  *= require_self
  *= require normalize
  *= require navigation
+ *= require events
  */
+
+@import "site-branding";
+
+body {
+  background-color: mid-green;
+}
