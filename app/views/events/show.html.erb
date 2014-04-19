@@ -16,9 +16,11 @@
   <%= link_to 'New Comment', new_comment_path(event_id: @event) %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'List Comments', comments_path(event_id: @event) %> |
-<%= link_to 'Back', events_path %>
+<% if member_signed_in? %>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %> |
+<% end %>
+<%= link_to 'List Comments', comments_path(event_id: @event) %>  
 
 <section id="comments">
   <%= render 'comments/index', comments: @comments, event: @event %>
