@@ -15,5 +15,7 @@
   <%= @comment.author %>
 </p>
 
-<%= link_to 'Edit', edit_comment_path(@comment) %> |
-<%= link_to 'Back', comments_path(event_id: @comment.event_id) %>
+<% if member_signed_in? %>
+  <%= link_to 'Edit', edit_comment_path(@comment) %> |
+  <%= link_to 'Back', comments_path(event_id: @comment.event_id) %>
+<% end %>
